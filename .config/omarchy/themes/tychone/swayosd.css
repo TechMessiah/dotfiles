@@ -1,0 +1,17 @@
+@define-color background-color #1e2125;
+@define-color border-color #897981;
+@define-color label #abb2bf;
+@define-color image #61afef;
+@define-color progress #98c379;
+
+window {
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #efefef;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+#origin-image,
+progressbar {
+  border-radius: 6px;
+}

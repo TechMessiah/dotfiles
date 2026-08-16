@@ -1,0 +1,82 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  background-color: @background;
+  color: white;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-size: 12px;
+  font-family: 'BlexMono Nerd Font';
+}
+
+.modules-left {
+  margin-left: 4px;
+}
+
+.modules-right {
+  margin-right: 4px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 4px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update,
+#tray, 
+#network,
+#custom-expand-icon {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+#bluetooth, #cpu {
+ margin: 0 6px;
+}
+#cpu {
+ margin-top: 5px;
+}
+
+tooltip {
+  padding: 2px;
+}
+#custom-omarchy {
+  font-family: 'BlexMono Nerd Font';
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+#clock {
+  font-size: 12px;
+  color: rgba(225,225,225,0.9);
+}
+.hidden {
+  opacity: 0;
+}
+#custom-expand-icon {
+ font-size: 14px;
+ margin-top: 3px;
+ margin-left: 4px;
+}
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 7.5px;
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+

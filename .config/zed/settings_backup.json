@@ -1,0 +1,148 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ssh_connections": [
+    {
+      "host": "cloud.carret.io",
+      "username": "techmessiah",
+      "port": 67,
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/./"],
+        },
+      ],
+    },
+    {
+      "host": "cloud.carret.io",
+      "username": "diplo",
+      "port": 67,
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/diplo"],
+        },
+      ],
+    },
+  ],
+  "restore_on_startup": "launchpad",
+  "cli_default_open_behavior": "existing_window",
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "ui_font_weight": 300.0,
+  "agent_buffer_font_size": 14.0,
+  "agent_ui_font_size": 16.0,
+  "agent_servers": {
+    "factory-droid": {
+      "type": "registry",
+    },
+    "github-copilot": {
+      "type": "registry",
+    },
+    "opencode": {
+      "type": "registry",
+    },
+  },
+  "git": {
+    "git_gutter": "hide",
+    "inline_blame": {
+      "enabled": true,
+    },
+  },
+
+  "outline_panel": {
+    "dock": "right",
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "indent_guides": {
+    "enabled": false,
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Light Charmed Icons",
+  },
+  "hide_mouse": "on_typing_and_movement",
+  "cursor_shape": "block",
+  "ui_font_family": ".ZedSans",
+  "buffer_font_family": ".ZedMono",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "soft_wrap": "editor_width",
+  "show_wrap_guides": false,
+  "agent": {
+    "dock": "right",
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^cat\\s+src/components/tables/SampleDetailsSheet\\.tsx(\\s|$)",
+            },
+            {
+              "pattern": "^grep\\b",
+            },
+          ],
+        },
+      },
+    },
+    "default_profile": "write",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o",
+      "enable_thinking": false,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "project_panel": {
+    "indent_guides": {
+      "show": "never",
+    },
+    "dock": "left",
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+  },
+  "scrollbar": {
+    "show": "never",
+    "cursors": false,
+    "git_diff": false,
+    "diagnostics": "none",
+  },
+  "ui_font_size": 16.0,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Everforest Dark Medium (material)",
+    "dark": "One Dark Pro",
+  },
+}

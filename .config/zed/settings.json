@@ -1,0 +1,226 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "title_bar": {
+    "show_branch_status_icon": false,
+  },
+  "vim": {
+    "cursor_shape": {
+      "visual": "hollow",
+      "replace": "block",
+      "insert": "block",
+      "normal": "hollow",
+    },
+    "show_edit_predictions_in_normal_mode": false,
+    "toggle_relative_line_numbers": true,
+  },
+  "global_lsp_settings": {
+    "button": false,
+  },
+  "debugger": {
+    "button": false,
+  },
+  "terminal": {
+    "button": false,
+  },
+  "edit_predictions": {
+    "provider": "zed",
+  },
+  "diagnostics": {
+    "button": false,
+  },
+  "search": {
+    "button": false,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": false,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "ssh_connections": [
+    {
+      "host": "ushop.sale",
+      "username": "techmessiah",
+      "args": [],
+      "projects": []
+    },
+    {
+      "host": "carret_prod",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/techmessiah/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "187.124.130.235",
+      "username": "diplo",
+      "port": 67,
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/diplo"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "carret_staging",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/diplo"
+          ]
+        }
+      ]
+    }
+  ],
+  "restore_on_startup": "launchpad",
+  "cli_default_open_behavior": "existing_window",
+  "collaboration_panel": {
+    "button": false,
+    "dock": "left",
+  },
+  "git_panel": {
+    "button": false,
+    "dock": "left",
+  },
+  "tabs": {
+    "git_status": false,
+    "file_icons": false,
+  },
+  "file_finder": {
+    "file_icons": false,
+  },
+  "ui_font_weight": 300.0,
+  "agent_buffer_font_size": 14.0,
+  "agent_ui_font_size": 16.0,
+  "agent_servers": {
+    "factory-droid": {
+      "type": "registry",
+    },
+    "github-copilot": {
+      "type": "registry",
+    },
+    "opencode": {
+      "type": "registry",
+    },
+  },
+  "git": {
+    "git_gutter": "hide",
+    "inline_blame": {
+      "enabled": true,
+    },
+  },
+  "outline_panel": {
+    "button": false,
+    "dock": "left",
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "indent_guides": {
+    "enabled": false,
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "hide_mouse": "on_typing",
+  "cursor_shape": "block",
+  "ui_font_family": ".ZedSans",
+  "buffer_font_family": ".ZedMono",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "active_language_button": false,
+    "cursor_position_button": false,
+    "experimental.show": false,
+  },
+  "soft_wrap": "editor_width",
+  "show_wrap_guides": false,
+  "agent": {
+    "button": false,
+    "flexible": false,
+    "sidebar_side": "left",
+    "dock": "left",
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^cat\\s+src/components/tables/SampleDetailsSheet\\.tsx(\\s|$)",
+            },
+            {
+              "pattern": "^grep\\b",
+            },
+          ],
+        },
+      },
+    },
+    "default_profile": "ask",
+    "default_model": {
+      "effort": "high",
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+      "enable_thinking": true,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "project_panel": {
+    "git_status_indicator": true,
+    "button": false,
+    "file_icons": false,
+    "folder_icons": false,
+    "dock": "right",
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+  },
+  "scrollbar": {
+    "show": "never",
+    "cursors": false,
+    "git_diff": false,
+    "diagnostics": "none",
+  },
+  "ui_font_size": 16.0,
+  "buffer_font_size": 15,
+  "theme": "One Dark Pro",
+}
