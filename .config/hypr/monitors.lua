@@ -9,22 +9,22 @@ hl.monitor({ output = "", mode = "preferred", position = "auto", scale = omarchy
 
 -- Built-in laptop display.
 hl.monitor({
-  output = "desc:Apple Computer Inc Color LCD",
-  mode = "2304x1440@59.945",
-  position = "0x0",
-  scale = omarchy_monitor_scale,
-  transform = 0,
-  vrr = 0,
+	output = "desc:Apple Computer Inc Color LCD",
+	mode = "2304x1440@59.945",
+	position = "0x0",
+	scale = omarchy_monitor_scale,
+	transform = 0,
+	vrr = 0,
 })
 
 -- External HP 527sa, placed to the right of the built-in display.
 hl.monitor({
-  output = "desc:HP Inc. HP 527sa 3CM4470D7F",
-  mode = "1920x1080@60",
-  position = "1440x0",
-  scale = omarchy_monitor_scale,
-  transform = 0,
-  vrr = 0,
+	output = "desc:HP Inc. HP 527sa 3CM4470D7F",
+	mode = "1600x900@60",
+	position = "1440x0",
+	scale = omarchy_monitor_scale,
+	transform = 0,
+	vrr = 0,
 })
 
 -- Configure a specific monitor.

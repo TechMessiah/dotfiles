@@ -36,7 +36,8 @@ return {
           SnacksBackdrop = { bg = "#000000" },
         },
       })
-      require("onedark").load()
+      -- `onedark.load()` is itself `:colorscheme onedark`, so calling both
+      -- sourced colors/onedark.lua twice (~5ms) and fired ColorScheme twice.
       vim.cmd("colorscheme onedark")
     end,
   },

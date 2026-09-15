@@ -3,7 +3,9 @@ return {
   event = "LazyFile",
   opts = {
     delay = 200,
-    providers = { "lsp", "treesitter", "regex" },
+    -- no "regex": it re-scans the buffer 200ms after every cursor stop and
+    -- is redundant once an LSP or treesitter parser is attached.
+    providers = { "lsp", "treesitter" },
   },
   config = function(_, opts)
     require("illuminate").configure(opts)

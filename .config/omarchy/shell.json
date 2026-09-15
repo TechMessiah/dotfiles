@@ -1,25 +1,14 @@
 {
   "bar": {
     "centerAnchor": "omarchy.clock",
+    "id": "techmessiah.bar",
     "layout": {
       "center": [
         {
-          "id": "omarchy.indicators"
-        },
-        {
           "format": "dddd HH:mm",
           "formatAlt": "d MMMM 'W'ww yyyy",
-          "id": "omarchy.clock",
+          "id": "techmessiah.clock",
           "verticalFormat": "HH\n—\nmm"
-        },
-        {
-          "id": "omarchy.keyboard-layout"
-        },
-        {
-          "id": "omarchy.weather"
-        },
-        {
-          "id": "omarchy.system-update"
         }
       ],
       "left": [
@@ -32,35 +21,55 @@
       ],
       "right": [
         {
-          "id": "omarchy.tray"
+          "id": "omarchy.keyboard-layout"
         },
         {
-          "id": "omarchy.agents"
+          "id": "omarchy.system-update"
         },
         {
-          "id": "omarchy.bluetooth"
+          "id": "techmessiah.audio"
         },
         {
-          "id": "omarchy.network"
+          "id": "techmessiah.network"
         },
         {
-          "id": "omarchy.audio"
+          "id": "techmessiah.bluetooth"
         },
         {
-          "id": "omarchy.monitor"
+          "id": "techmessiah.power"
         },
         {
-          "id": "omarchy.power"
+          "id": "techmessiah.control-center"
         }
       ]
     },
     "position": "top",
     "transparent": false
   },
+  "cloneSourceRestores": [
+    "techmessiah.notifications",
+    "techmessiah.lock",
+    "techmessiah.osd"
+  ],
+  "disabledPlugins": [
+    "omarchy.notifications",
+    "omarchy.lock",
+    "omarchy.osd"
+  ],
   "idle": {
     "lock": 300,
     "screensaver": 150
   },
-  "plugins": [],
+  "plugins": [
+    {
+      "id": "techmessiah.notifications"
+    },
+    {
+      "id": "techmessiah.lock"
+    },
+    {
+      "id": "techmessiah.osd"
+    }
+  ],
   "version": 1
 }

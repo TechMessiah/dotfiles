@@ -39,7 +39,7 @@ o.bind("SUPER + SHIFT + T", "Activity", { tui = "btop" })
 -- Plugin dispatchers live on hl.plugin.<plugin>.<dispatcher> and fire when
 -- called, so they have to be wrapped in a function rather than passed directly.
 o.bind("SUPER + GRAVE", "Workspace overview", function()
-  hl.plugin.hyprexpo.expo("toggle")
+	hl.plugin.hyprexpo.expo("toggle")
 end)
 
 -- Typora on SUPER + SHIFT + W. Not installed right now (quattro's default binds
@@ -50,5 +50,8 @@ end)
 
 -- Quickapps shell on ALT + SPACE. ~/.local/share/omarchy-quickapps/shell.qml no
 -- longer exists, so this stays off until that shell is restored.
--- o.bind("ALT + SPACE", "Quickapps", "quickshell -p " ..
---   (os.getenv("HOME") or "") .. "/.local/share/omarchy-quickapps/shell.qml")
+o.bind(
+	"ALT + SPACE",
+	"Quickapps",
+	"quickshell -p " .. "/home/techmessiah/.local/share/omarchy-quickapps/ironman/shell.qml"
+)

@@ -28,3 +28,7 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
+
+-- Glassmorphism for the notification toast stack: blur whatever shows
+-- through its translucent rounded cards (techmessiah.notifications).
+hl.layer_rule({ match = { namespace = "^omarchy-notifications$" }, blur = true, ignore_alpha = 0.15 })

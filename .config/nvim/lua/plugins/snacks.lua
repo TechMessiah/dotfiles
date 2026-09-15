@@ -1,6 +1,8 @@
 return {
   "folke/snacks.nvim",
   opts = function(_, opts)
+    local explorer_state = require("config.explorer_state")
+
     opts.explorer = vim.tbl_deep_extend("force", opts.explorer or {}, {
       replace_netrw = true,
     })
@@ -21,7 +23,10 @@ return {
       sources = {
         explorer = {
           layout = { preset = "default" },
+          config = explorer_state.apply,
           actions = {
+            explorer_toggle_hidden = explorer_state.toggle("hidden"),
+            explorer_toggle_ignored = explorer_state.toggle("ignored"),
             glow_preview = function(_, item)
               if item then
                 require("config.glow").open(Snacks.picker.util.path(item))
@@ -48,18 +53,23 @@ return {
           jump = { close = true },
           follow_file = false,
           focus = "list",
-          hidden = true,
-          ignored = true,
           win = {
+            input = {
+              keys = {
+                ["<a-h>"] = { "explorer_toggle_hidden", mode = { "i", "n" } },
+                ["<a-i>"] = { "explorer_toggle_ignored", mode = { "i", "n" } },
+              },
+            },
             list = {
               keys = {
+                ["I"] = "explorer_toggle_ignored",
                 ["a"] = "explorer_add",
                 ["d"] = "explorer_del",
                 ["r"] = "explorer_rename",
                 ["c"] = "explorer_copy",
                 ["m"] = "explorer_move",
                 ["y"] = "explorer_yank",
-                ["H"] = "toggle_hidden",
+                ["H"] = "explorer_toggle_hidden",
                 ["<leader>mg"] = "glow_preview",
                 ["f"] = "search_files",
                 ["s"] = "search_grep",

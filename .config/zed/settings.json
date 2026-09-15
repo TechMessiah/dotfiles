@@ -88,6 +88,17 @@
           ]
         }
       ]
+    },
+    {
+      "host": "carret_dev",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/techmessiah"
+          ]
+        }
+      ]
     }
   ],
   "restore_on_startup": "launchpad",
@@ -167,7 +178,7 @@
     "show_active_file": false,
     "active_language_button": false,
     "cursor_position_button": false,
-    "experimental.show": false,
+    // "experimental.show": false
   },
   "soft_wrap": "editor_width",
   "show_wrap_guides": false,

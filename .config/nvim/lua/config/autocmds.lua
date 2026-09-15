@@ -88,9 +88,18 @@ vim.api.nvim_create_autocmd("TextChanged", {
     end
     autosave_timer = vim.defer_fn(function()
       autosave_timer = nil
-      if vim.bo.modified then
-        vim.cmd("silent! write")
+      if not vim.bo.modified then
+        return
       end
+      -- LazyVim's BufWritePre formatter checks b:autoformat before running
+      -- (lazyvim/util/format.lua), and so does the vtsls organize-imports
+      -- autocmd in plugins/lsp.lua. Suppressing it here keeps the autosave
+      -- off the formatter, which costs ~200ms for prettier/sql-formatter.
+      -- An explicit :w still formats.
+      local autoformat = vim.b.autoformat
+      vim.b.autoformat = false
+      pcall(vim.cmd, "silent! write")
+      vim.b.autoformat = autoformat
     end, 500)
   end,
 })

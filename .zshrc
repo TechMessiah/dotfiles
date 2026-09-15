@@ -139,3 +139,10 @@ export PATH=/home/techmessiah/.opencode/bin:$PATH
 eval "$(mise activate zsh)"
 
 . "$HOME/.local/share/../bin/env"
+
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/techmessiah/.lmstudio/bin"
+# End of LM Studio CLI section
+

@@ -63,7 +63,10 @@ function M.setup()
         if register == "*" then
           cmd[#cmd + 1] = "--primary"
         end
-        vim.fn.system(cmd, lines)
+        -- async: a wl-copy spawn costs 50-90ms, and blocking on it would put
+        -- that on every yank. Nothing here needs the result.
+        -- trailing NL to match what vim.fn.system() wrote for a List input
+        vim.system(cmd, { stdin = table.concat(lines, "\n") .. "\n" })
       end
 
       if vim.g.omarchy_remote_clipboard_osc52 ~= false then

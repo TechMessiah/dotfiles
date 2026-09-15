@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "techmessiah.control-center",
+  "name": "Control Center",
+  "version": "1.0.0",
+  "author": "TechMessiah",
+  "description": "macOS-style control center: indicator tiles and the system tray in one popup",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Control Center",
+    "description": "Indicator tiles and system tray in one popup",
+    "category": "System",
+    "allowMultiple": false
+  }
+}

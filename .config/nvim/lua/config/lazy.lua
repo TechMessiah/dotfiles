@@ -32,9 +32,11 @@ require("lazy").setup({
   },
   install = { colorscheme = { "onedark", "habamax" } },
   checker = {
-    enabled = true, -- check for plugin updates periodically
+    -- off: this spawned an hourly `git fetch` across every installed plugin.
+    -- Run `:Lazy check` when you actually want to know.
+    enabled = false,
     notify = false, -- notify on update
-  }, -- automatically check for plugin updates
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins

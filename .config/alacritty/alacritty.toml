@@ -11,7 +11,7 @@ normal = { family = "BlexMono Nerd Font" }
 bold = { family = "BlexMono Nerd Font" }
 italic = { family = "BlexMono Nerd Font" }
 
-size = 11
+size = 9
 
 [font.offset]
 x = 0

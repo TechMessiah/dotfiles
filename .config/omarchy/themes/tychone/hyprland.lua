@@ -1,13 +1,19 @@
 -- Tychone theme borders (Lua port of the pre-quattro hyprland.conf).
 -- This file wins over the generated template because omarchy-theme-set-templates
 -- only writes hyprland.lua when the theme doesn't already ship one.
+--
+-- Each active border is a three-stop gradient that travels in HUE at constant
+-- brightness, not from bright to dark. Luminance ramps read as "one lit end,
+-- one faint end" and pull the eye; a flat-brightness hue arc reads as a border
+-- that shifts color along its run. Alpha is a constant 99 on every stop, which
+-- keeps the overall weight near the theme's original flat 88 borders.
 
-local cyan = "rgba(90f1ef88)" -- default focus / calm apps
-local mint = "rgba(7bf1a888)" -- terminals
-local blush = "rgba(ffd6e088)" -- browsers
-local butter = "rgba(ffef9f88)" -- editors / fullscreen
-local sage = "rgba(c1fba488)" -- file managers
-local inactive = "rgba(5c637044)" -- neutral, unfocused stays quiet
+local cyan = { colors = { "rgba(90f1ef99)", "rgba(86c8f299)", "rgba(9fb6f099)" }, angle = 45 } -- default focus / calm apps
+local mint = { colors = { "rgba(7bf1a899)", "rgba(78ead099)", "rgba(86e0f099)" }, angle = 45 } -- terminals
+local blush = { colors = { "rgba(ffd6e099)", "rgba(f2c9f099)", "rgba(d9c9ff99)" }, angle = 45 } -- browsers
+local butter = { colors = { "rgba(ffef9f99)", "rgba(ffd9a399)", "rgba(ffc7b099)" }, angle = 45 } -- editors / fullscreen
+local sage = { colors = { "rgba(c1fba499)", "rgba(a8f0b899)", "rgba(93e8cf99)" }, angle = 45 } -- file managers
+local inactive = "rgba(5c637044)" -- neutral, unfocused stays quiet and flat
 
 hl.config({
   general = {
@@ -25,23 +31,23 @@ hl.config({
   },
 })
 
--- Per-app active border colors. The window rule only carries the ACTIVE color
--- (as a gradient table); unfocused windows keep the global `inactive` above.
+-- Per-app active border colors. The window rule only carries the ACTIVE gradient;
+-- unfocused windows keep the global `inactive` above.
 
--- Terminals - mint
-o.window("^(kitty|Alacritty|com.mitchellh.ghostty|foot)$", { border_color = { colors = { mint } } })
+-- Terminals - mint into cyan
+o.window("^(kitty|Alacritty|com.mitchellh.ghostty|foot)$", { border_color = mint })
 
--- Browsers - blush pink
-o.window("^(firefox|Chromium|brave-browser|google-chrome|zen|zen-alpha)$", { border_color = { colors = { blush } } })
+-- Browsers - blush into rose
+o.window("^(firefox|Chromium|brave-browser|google-chrome|zen|zen-alpha)$", { border_color = blush })
 
--- Editors - pale yellow
-o.window("^(Code|nvim|neovide|zed|Helix)$", { border_color = { colors = { butter } } })
+-- Editors - butter into blush
+o.window("^(Code|nvim|neovide|zed|Helix)$", { border_color = butter })
 
--- File managers - sage green
-o.window("^(nautilus|org.gnome.Nautilus|dolphin)$", { border_color = { colors = { sage } } })
+-- File managers - sage into mint
+o.window("^(nautilus|org.gnome.Nautilus|dolphin)$", { border_color = sage })
 
 -- Media / games - cyan (same as default, low-priority visual)
-o.window("^(Spotify|steam)$", { border_color = { colors = { cyan } } })
+o.window("^(Spotify|steam)$", { border_color = cyan })
 
--- Uncomment to make every fullscreen window pale yellow regardless of app:
--- o.window({ fullscreen = true }, { border_color = { colors = { butter } } })
+-- Uncomment to make every fullscreen window butter regardless of app:
+-- o.window({ fullscreen = true }, { border_color = butter })
